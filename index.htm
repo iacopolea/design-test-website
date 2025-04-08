@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+            <img src="https://fastly.picsum.photos/id/200/100/100.jpg?hmac=aEZqH2AXsBzaHqQvlgAnm7PN3wao_divz1LW4wBp-dk" alt="Logo" style="height: 40px;">
+            <h1>Dashboard</h1>
+        </div>
+        <select title="workspace-select" id="workspace-select">
+            <option value="workspace1">Workspace 1</option>
+            <option value="workspace2">Workspace 2</option>
+            <option value="workspace3">Workspace 3</option>
+        </select>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Activities</a>
+            <a href="#">Projects</a>
+            <a href="#">Archive</a>
+        </div>
+
+        <div class="main-content">
+            <h2>Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Activity Type</th>
+                        <th>Test Type</th>
+                        <th>Start Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Placeholder for dynamic content -->
+                </tbody>
+            </table>
+
+            <div class="cards-container" id="cards-container">
+              <!-- Dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Company. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy</a> | <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="product-card.js"></script>
+    <script>
+      async function loadData() {
+        try {
+          const response = await fetch('data.json');
+          const data = await response.json();
+    
+          // Load project table
+          const tbody = document.querySelector('table tbody');
+          data.projects.forEach(project => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${project.name}</td>
+              <td>${project.activityType}</td>
+              <td>${project.testType}</td>
+              <td>${project.startDate}</td>
+              <td>${project.status}</td>
+            `;
+            tbody.appendChild(row);
+          });
+    
+          // Load product cards
+          const cardContainer = document.getElementById('cards-container');
+          data.products.forEach(product => {
+            const card = document.createElement('product-card');
+            card.setAttribute('title', product.title);
+            card.setAttribute('description', product.description);
+            card.setAttribute('image', product.image);
+            cardContainer.appendChild(card);
+          });
+    
+        } catch (error) {
+          console.error("Error loading JSON:", error);
+        }
+      }
+    
+      window.addEventListener('DOMContentLoaded', loadData);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "title": "Product 1",
+      "description": "Amazing product for your needs!",
+      "image": "https://fastly.picsum.photos/id/701/500/500.jpg?hmac=GMTZzuRCXLqC2bviO7vBkD8IglF-b7GGxhm8Qs2zF_I"
+    },
+    {
+      "title": "Product 2",
+      "description": "Get this now for incredible results!",
+      "image": "https://fastly.picsum.photos/id/701/500/500.jpg?hmac=GMTZzuRCXLqC2bviO7vBkD8IglF-b7GGxhm8Qs2zF_I"
+    },
+    {
+      "title": "Product 3",
+      "description": "The latest innovation in the market!",
+      "image": "https://fastly.picsum.photos/id/701/500/500.jpg?hmac=GMTZzuRCXLqC2bviO7vBkD8IglF-b7GGxhm8Qs2zF_I"
+    },
+    {
+      "title": "Product 4",
+      "description": "Revolutionary design and functionality!",
+      "image": "https://fastly.picsum.photos/id/701/500/500.jpg?hmac=GMTZzuRCXLqC2bviO7vBkD8IglF-b7GGxhm8Qs2zF_I"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project 1",
+      "activityType": "Usability",
+      "testType": "Exploratory",
+      "startDate": "2025-04-10",
+      "status": "Active"
+    },
+    {
+      "name": "Project 2",
+      "activityType": "Performance",
+      "testType": "A/B Test",
+      "startDate": "2025-04-15",
+      "status": "Upcoming"
+    },
+    {
+      "name": "Project 3",
+      "activityType": "Accessibility",
+      "testType": "Survey",
+      "startDate": "2025-04-20",
+      "status": "Completed"
+    },
+    {
+      "name": "Project 4",
+      "activityType": "Security",
+      "testType": "Penetration Test",
+      "startDate": "2025-04-25",
+      "status": "In Progress"
+    },
+    {
+      "name": "Project 5",
+      "activityType": "Usability",
+      "testType": "Exploratory",
+      "startDate": "2025-04-30",
+      "status": "Active"
+    }
+  ]
+}
