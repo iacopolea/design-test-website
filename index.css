@@ -54,9 +54,18 @@ table th, table td {
   text-align: left;
 }
 .cards-container {
-  display: flex;
-  gap: 20px;
   margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .cards-container {
+    display: flex;
+    gap: 8px;
+  }
+}
+@media (min-width: 1440px) {
+  .cards-container {
+    gap: 16px;
+  }
 }
 footer {
   display: flex;
